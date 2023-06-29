@@ -5,9 +5,21 @@ Author: Sailendra Chettri */
 #include <bits/stdc++.h>
 using namespace std;
 
+int result(int, int);
+
 int main()
 {
-    cout << "HCF: " << __gcd(60, 75) << endl;
+    int num1, num2, res;
+    cout << "Enter two numbers: ";
+    cin >> num1 >> num2;
+
+    res = result(num1, num2);
+    cout << "HCF of " << num1 << " and " << num2 << " is " << res << endl;
 
     return 0;
+}
+
+int result(int num1, int num2)
+{
+    return __gcd(num1, num2);
 }
