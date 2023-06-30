@@ -21,5 +21,17 @@ int main()
 
 int result(int num1, int num2)
 {
-    return __gcd(num1, num2);
+    static int i = 1;
+    int res;
+
+    if (num1 % i == 0 and num2 % i == 0)
+    {
+        res = i;
+    }
+
+    if (i >= num1 and i >= num2)
+    {
+        return res;
+    }
+    result(++i);
 }
